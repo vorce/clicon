@@ -1,7 +1,4 @@
-function SetDefaultPortrait(frame)
-    SetPortraitTexture(frame.portrait, frame.unit)
-    frame.portrait:SetTexCoord(0, 1, 0, 1)
-end
+local SupportedUnits = { ['player'] = true, ['party1'] = true, ['party2'] = true, ['party3'] = true, ['party4'] = true, ['focus'] = true, ['target'] = true }
 
 function SetClassPortrait(frame)
     local _, unitClass = UnitClass(frame.unit)
@@ -13,12 +10,8 @@ function SetClassPortrait(frame)
     end
 end
 
-local SupportedUnits = { ['player'] = true, ['party1'] = true, ['party2'] = true, ['party3'] = true, ['party4'] = true, ['focus'] = true, ['target'] = true }
-
 hooksecurefunc("UnitFramePortrait_Update", function (self)
     if (SupportedUnits[self.unit] and self.portrait) then
         SetClassPortrait(self)
-    else
-        SetDefaultPortrait(self)
     end
 end)
