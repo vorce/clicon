@@ -1,0 +1,6 @@
+## Interface: 100000
+## Title: Clicon
+## Notes: Shows class portraits of player characters
+## Version: v1.0
+## Author: Joel C
+Clicon.lua
