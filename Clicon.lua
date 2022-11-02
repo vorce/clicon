@@ -10,8 +10,17 @@ function SetClassPortrait(frame)
     end
 end
 
+function SetDefaultPortrait(frame)
+    if (frame.portrait and frame.unit) then
+        SetPortraitTexture(frame.portrait, frame.unit)
+        frame.portrait:SetTexCoord(0, 1, 0, 1)
+    end
+end
+
 hooksecurefunc("UnitFramePortrait_Update", function (self)
     if (SupportedUnits[self.unit] and self.portrait) then
         SetClassPortrait(self)
+    else
+        SetDefaultPortrait(self)
     end
 end)
