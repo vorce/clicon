@@ -1,4 +1,4 @@
-## Interface: 100000
+## Interface: 100002
 ## Title: Clicon
 ## Notes: Shows class portraits of player characters
 ## Version: v1.0
