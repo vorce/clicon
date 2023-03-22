@@ -1,4 +1,4 @@
-## Interface: 100005
+## Interface: 100007
 ## Title: Clicon
 ## Notes: Shows class portraits of player characters
 ## Version: v1.0
